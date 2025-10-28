@@ -1,0 +1,26 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Intentionally outdated versions for Dependabot testing -->
+
+    <!-- Common packages with old versions -->
+    <PackageVersion Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageVersion Include="Serilog" Version="2.10.0" />
+    <PackageVersion Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageVersion Include="Serilog.Sinks.Console" Version="4.0.0" />
+    <PackageVersion Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageVersion Include="AutoMapper" Version="10.1.1" />
+    <PackageVersion Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageVersion Include="FluentValidation" Version="10.3.0" />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.0" />
+
+    <!-- Additional outdated packages -->
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.0" />
+  </ItemGroup>
+</Project>

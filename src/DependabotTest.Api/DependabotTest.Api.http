@@ -1,0 +1,6 @@
+@DependabotTest.Api_HostAddress = http://localhost:5092
+
+GET {{DependabotTest.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

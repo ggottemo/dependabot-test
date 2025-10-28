@@ -1,0 +1,60 @@
+@page "/products"
+@using DependabotTest.Library
+@using Newtonsoft.Json
+
+<PageTitle>Products</PageTitle>
+
+<h1>Products</h1>
+
+<p>This page demonstrates usage of Newtonsoft.Json for serialization.</p>
+
+@if (products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@product.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>JSON Serialization Example</h3>
+    <pre>@jsonOutput</pre>
+}
+
+@code {
+    private List<Product>? products;
+    private string? jsonOutput;
+
+    protected override void OnInitialized()
+    {
+        // Create sample products
+        products = new List<Product>
+        {
+            new Product { Id = 1, Name = "Laptop", Price = 999.99m, Description = "High-performance laptop" },
+            new Product { Id = 2, Name = "Mouse", Price = 29.99m, Description = "Wireless mouse" },
+            new Product { Id = 3, Name = "Keyboard", Price = 79.99m, Description = "Mechanical keyboard" }
+        };
+
+        // Demonstrate Newtonsoft.Json serialization
+        jsonOutput = JsonConvert.SerializeObject(products, Formatting.Indented);
+    }
+}
