@@ -1,17 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "groupName": "all dependencies",
-  "groupSlug": "all",
-  "lockFileMaintenance": {
-    "enabled": false
-  },
   "packageRules": [
     {
-      "matchPackageNames": ["*"],
-      "groupName": "all dependencies",
-      "groupSlug": "all"
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
     }
-  ],
-  "separateMajorMinor": true
+  ]
 }
