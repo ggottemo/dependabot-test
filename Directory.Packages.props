@@ -15,7 +15,7 @@
     <PackageVersion Include="AutoMapper" Version="10.1.1" />
     <PackageVersion Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageVersion Include="FluentValidation" Version="10.3.0" />
-    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.0" />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
 
     <!-- Additional outdated packages -->
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.2.3" />
